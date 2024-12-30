@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Quintessential&display=swap" rel="stylesheet">
+    <style>
+    .responsive {
+    max-width: 100%;
+    height: auto;
+    }
+    #content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        background-color: #b4becb;
+    }
+    </style>
+    <title>Tiffany & Tobias Wedding</title>
+</head>
+
+<body>
+        
+    <div class="box covercontainer"> 
+            <a href="#" class="nav left">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </a>
+
+
+        <p class="centered quintessential-regular"> Tiffany & Tobias </p>
+        <p class="centered1 old-standard-tt"> 15 March 2025 </p>
+        <img src="/static/images/20240109-668.jpg" class="image1">
+    </div>
+
+    <div class="grid"> 
+        <div></div>
+        <div class="center">
+            <p class="p1"> To All our Guests <br></p>
+            <br>
+            <p class="p2">Thank you very much for celebrating this special day with us. After dating for more than 7 years, we decide to get married and start our new family with the love and blessings from our family and friends. In case there is anything you need on that day, please do not hesitate to reach out to the our groomsmen and bridesmaids, they are our best mates and the wedding will not be successful without them. Thank you and god bless.<br>
+            <br>With Love,<br></p>
+            <p class="signing">Tiffany & Tobias</p>
+        </div>
+    </div>
+
+    <div class="twocol">
+        <div class="center">
+            <p class="p1">Wedding Banquet</p><br>
+
+            <p class="p2">When</p>
+            <p class="p2" style="font-size: 15px">Reception starts at 6:30pm</p><br>
+
+            <p class="p2">Where</p>
+            <p class="p2" style="font-size: 15px">JW Marriott Hotel Hong Kong<br>
+            88 Queensway, Admiralty</p><br>
+            
+            <p class="p2">Which table do you sit at</p>
+            <p class="p2" style="font-size: 15px">Enter the first 4 digits of your mobile number below to check your assigned table.</p>
+            
+            <form method="post">
+                <input class="typebar" value="First 4 digits of your" type="number" name="phone" minlength="4" maxlength="4" required><br><br>
+                <input class="searchbutton" type="submit" name="submit" value="Search">
+                </p>
+            </form>
+            
+        </div>
+
+        <div class="box container"> 
+            <img src="/static/images/banquetphoto3.jpg" class="image1">
+        </div>
+    </div>
+
+    <div class="twocol">
+        <div class="box container"> 
+            <img src="/static/images/church.jpg" class="image1">
+        </div>
+
+        <div class="center">
+            
+            <p class="p1">Church Ceremony</p>
+
+            <p class="p2">When</p>
+            <p class="p2" style="font-size: 15px">2:45 pm to 4:00pm</p><br>
+
+            <p class="p2">Where</p>
+            <p class="p2" style="font-size: 15px">St Magaret's Church<br>
+            2A Broadwood Rd, Leighton Hill, Happy Valley</p><br>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.103057734834!2d114.18182881102388!3d22.274085643760188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040051e9334711%3A0x7931346c5d494034!2sSt.%20Margaret&#39;s%20Church!5e0!3m2!1sen!2shk!4v1733999500201!5m2!1sen!2shk" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+    </div>
+    
+    <div class="slidegrid">
+        <div class="background">
+            <div class="slider-container center">
+                <div class="slider">
+                    <div class="slide"><img src="/static/images/slider/1.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/2.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/3.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/4.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/5.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/6.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/7.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/8.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/9.jpg" ></div>
+                    <div class="slide"><img src="/static/images/slider/10.jpg"></div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="dots-container">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+                <span class="dot" data-index="6"></span>
+                <span class="dot" data-index="7"></span>
+                <span class="dot" data-index="8"></span>
+                <span class="dot" data-index="9"></span>
+                <span class="dot" data-index="10"></span>
+            </div>
+            <script src="/static/slider.js"></script>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+</body>
+</html>

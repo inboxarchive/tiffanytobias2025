@@ -1,0 +1,403 @@
+.old-standard-tt-regular {
+    font-family: 'Old Standard TT', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.old-standard-tt {
+    font-family: 'Old Standard TT', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    color: #f9fcff;
+    white-space: nowrap
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    font-family: 'Old Standard TT', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color:rgba(230, 220, 205, 0.432);
+    height: 500px
+}
+
+.slidegrid {
+    display: grid;
+    background-color:rgba(230, 220, 205, 0.432);
+    height: 500px
+}
+
+.container {
+    display: flex;
+    height: 550px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color:#ffffff;
+    color: #333;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 200px;
+    height: 200px;
+}
+
+.showcase-form-input {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px
+}
+
+.center {
+    padding: 30px 0;
+    text-align: center;
+}
+
+  #main{
+    grid-area: main;
+    background-image: url("/static/images/cover_photo3.jpg");
+    background-size: cover;
+    color:white;
+  }
+
+  .grid-container {
+    background-color: rgba(221, 220, 175, 0.432);
+    height: 800px
+}
+
+.column {
+    width: 33.33%;
+}
+
+.twocol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:#f5f5f5;
+    height: 550px;
+    grid-template-areas: "" "banquetphoto";
+}
+
+.box img {
+    grid-area: main;
+    background-image: url("/static/images/banquetphoto2.jpg");
+  }
+
+.image1 {
+    grid-area: image1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p1 {
+    font-family: "Tahoma", sans-serif;
+    font-size: 35px;
+}
+
+.p2 {
+    font-family: "Tahoma", sans-serif;
+    font-size: 20px;
+}
+
+.signing {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+}
+
+.typebar{
+    border: 0;
+    border-bottom: 1px solid #000000;
+    width: 400px;
+    padding: 3px;
+    font-size: 16px;
+    outline: none;
+    background: var(--primary-color);
+    height:50px;
+}
+
+.searchbutton{
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color:#000000;
+    border-radius: 5px;
+}
+
+/* Global reset for margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling - sets up the page's background, font, and center alignment */
+
+
+/* Container for the entire slider section including the title and slider itself */
+.background {
+    width: 100%; /* Sets the width to fill the available space */
+    height: 100%; /* Sets the height to fill the available space */
+    position: relative; /* Allows for absolute positioning of child elements */
+    display: grid; /* Enables flexbox layout */
+    flex-direction: column; /* Aligns items in a column (vertical stack) */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Styling for the title above the slider */
+.slider-title {
+    font-size: 4rem; /* Large font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Main container for the slider - this holds the images and navigation buttons */
+.slider-container {
+    position: relative; /* Allows for absolute positioning of navigation buttons */
+    width: 60%; /* Sets the slider width to 60% of the parent container */
+    max-width: 1000px; /* Maximum width for larger screens */
+    overflow: hidden; /* Hides the overflow content (only one image is visible at a time) */
+    border-radius: 10px; /* Rounds the corners of the slider */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flexbox container that holds all the slides */
+.slider {
+    display: flex; /* Enables flexbox layout to line up slides horizontally */
+    transition: transform 0.4s ease-in-out; /* Smooth transition when sliding between images */
+}
+
+/* Each individual slide - takes up full width of the container */
+.slide {
+    min-width: 100%; /* Each slide takes up 100% of the slider container's width */
+    height: 450px; /* Fixed height for each slide */
+    transition: transform 0.5s ease-in-out; /* Smooth transition when slides are changed */
+}
+
+/* Ensures that images fill the slide area while maintaining aspect ratio */
+.slide img {
+    width: 100%; /* Image width matches the slide width */
+    height: 100%; /* Image height matches the slide height */
+    object-fit: cover; /* Images are scaled to cover the entire slide, cropping if necessary */
+    border-radius: 10px; /* Rounds the corners of the images to match the slider */
+}
+
+/* Common styling for both previous and next navigation buttons */
+.prev, .next {
+    position: absolute; /* Absolute positioning within the slider container */
+    top: 50%; /* Centers the button vertically */
+    transform: translateY(-50%); /* Offsets the button position by half its height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White color for the arrow icons */
+    border: none; /* Removes default button borders */
+    width: 40px; /* Fixed width for the buttons */
+    height: 40px; /* Fixed height for the buttons */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    z-index: 10; /* Ensures buttons appear above the slider content */
+    border-radius: 50%; /* Makes the buttons round */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+    display: flex; /* Enables flexbox for centering the arrow inside the button */
+    justify-content: center; /* Centers arrow horizontally */
+    align-items: center; /* Centers arrow vertically */
+    padding: 0; /* Removes any default padding */
+}
+
+/* Positioning the previous button to the left */
+.prev {
+    left: 10px; /* Positions the button 10px from the left edge */
+}
+
+/* Positioning the next button to the right */
+.next {
+    right: 10px; /* Positions the button 10px from the right edge */
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darkens the button background on hover */
+}
+
+/* Container for the dot indicators below the slider */
+.dots-container {
+    margin-top: 20px; /* Space above the dots */
+    display: flex; /* Enables flexbox layout for horizontal alignment */
+    justify-content: center; /* Centers the dots horizontally */
+    align-items: center; /* Centers the dots vertically */
+}
+
+/* Common styling for each individual dot */
+.dot {
+    height: 15px; /* Fixed height for the dots */
+    width: 15px; /* Fixed width for the dots */
+    margin: 0 5px; /* Spacing between the dots */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border-radius: 50%; /* Makes the dots round */
+    display: inline-block; /* Ensures dots are inline */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+}
+
+/* Styling for the active dot - indicates the current slide */
+.dot.active {
+    background-color: rgba(255, 255, 255, 1); /* Solid white background for the active dot */
+}
+
+
+.gallery {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+#backBtn,
+#nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.centered1 {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.covercontainer {
+    display: flex;
+    height: 650px;
+}
+
+.quintessential-regular {
+    font-family: "Quintessential", static;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    color:#f9fcff;
+    white-space: nowrap
+}
+
+.quintessential {
+    font-family: "Quintessential", static;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color:#f9fcff;
+    white-space: nowrap
+}
+
+.wrapper{
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+.nav div {
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav {
+    width: 30px;
+    display: block;
+    margin: 1em 0 0 1em;
+}
+
+.one {
+    width: 60px;
+}
+
+.two {
+    width: 40px;
+}
+
+.three {
+    width: 45px;
+}
+
+.nav:hover div {
+    width: 30px;
+}
